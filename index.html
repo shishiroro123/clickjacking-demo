@@ -7,8 +7,10 @@
       position: absolute;
       top: 0; left: 0;
       width: 1024px; height: 768px;
-      opacity: 0.01; /* presque invisible */
+      opacity: 0.3; /* un peu visible pour test */
       z-index: 2;
+      border: 2px solid rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
     #overlay {
       position: absolute;
@@ -22,9 +24,17 @@
       position: relative;
       z-index: 4;
       margin: 20px;
-      padding: 10px 20px;
-      font-size: 1.2em;
+      padding: 15px 30px;
+      font-size: 1.4em;
       cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+    }
+    button:hover {
+      background-color: #3367d6;
     }
   </style>
 </head>
@@ -35,5 +45,3 @@
   <div id="overlay"></div>
 </body>
 </html>
-
-
